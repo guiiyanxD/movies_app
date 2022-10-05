@@ -57,7 +57,6 @@ class _CustomAppBar extends StatelessWidget {
   }
 }
 
-
 class _PosterAndTitle extends StatelessWidget {
   const _PosterAndTitle ({Key? key}) : super(key: key);
 
