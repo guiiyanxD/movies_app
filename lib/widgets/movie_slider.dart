@@ -43,7 +43,7 @@ class _MovieSilder extends StatelessWidget {
       height: 190,
       width: 130,
       // padding: EdgeInsets.only(bottom: 1),
-      color: Colors.amberAccent,
+      // color: Colors.amberAccent,
       margin: const EdgeInsets.all(10),
       child: Column(
         children: [

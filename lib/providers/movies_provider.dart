@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:peliculas_app/models/models.dart';
 
 class MoviesProvider extends ChangeNotifier{
   String _baseUrl  = 'api.themoviedb.org';
@@ -7,10 +8,10 @@ class MoviesProvider extends ChangeNotifier{
   String _language  = 'es-ES';
 
   MoviesProvider(){
+    getNowPlayingMovies();
+
     print("This is our first time by using the State Management. 🎉");
 
-
-    getNowPlayingMovies();
   }
 
   getNowPlayingMovies() async {
@@ -23,7 +24,11 @@ class MoviesProvider extends ChangeNotifier{
     );
 
     var response = await http.get(url);
+    print(response);
+    final nowPlayResponse = NowPlayingResponse.fromJson(response.body);
+    print("esta es la pelicula que estamos esperando: " + nowPlayResponse.results[3].title);
     // response.statusCode == 200;
-    print(response.body);
+
+    // print("El titulo de la pelcula que estoy peserando es: $response.body");
   }
 }

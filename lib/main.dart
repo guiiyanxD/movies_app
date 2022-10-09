@@ -4,21 +4,24 @@ import 'package:peliculas_app/screens/screens.dart';
 import 'package:peliculas_app/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp( MyApp() );
+void main() => runApp( AppState() );
 
-/*class AppState extends StatelessWidget {
+class AppState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: ( _ ) => MoviesProvider(), lazy: false,),
+        ChangeNotifierProvider(
+          create: ( _ ) => MoviesProvider(), lazy: false,
+        ),
+
       ],
       child: MyApp(),
     );
   }
 }
-*/
+
 
 class MyApp extends StatelessWidget{
 
